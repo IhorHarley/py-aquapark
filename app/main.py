@@ -2,6 +2,7 @@ from __future__ import annotations
 from abc import ABC
 from typing import Any, Type
 
+
 class IntegerRange:
     def __init__(self, min_amount: int, max_amount: int) -> None:
         self.min_amount = min_amount
@@ -26,17 +27,17 @@ class IntegerRange:
 
 
 class Visitor:
-   def __init__(
-           self,
-           name: str,
-           age: int,
-           weight: int,
-           height: int
-   ) -> None:
-       self.name = name
-       self.age = age
-       self.weight = weight
-       self.height = height
+    def __init__(
+            self,
+            name: str,
+            age: int,
+            weight: int,
+            height: int
+    ) -> None:
+        self.name = name
+        self.age = age
+        self.weight = weight
+        self.height = height
 
 
 class SlideLimitationValidator(ABC):
@@ -52,9 +53,9 @@ class SlideLimitationValidator(ABC):
 
 
 class ChildrenSlideLimitationValidator(SlideLimitationValidator):
-    age = IntegerRange(4,14)
-    height = IntegerRange(80,120)
-    weight = IntegerRange(20,50)
+    age = IntegerRange(4, 14)
+    height = IntegerRange(80, 120)
+    weight = IntegerRange(20, 50)
 
 
 class AdultSlideLimitationValidator(SlideLimitationValidator):
